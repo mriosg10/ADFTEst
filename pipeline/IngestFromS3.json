@@ -1,0 +1,6 @@
+{
+	"name": "IngestFromS3",
+	"properties": {
+		"annotations": []
+	}
+}
