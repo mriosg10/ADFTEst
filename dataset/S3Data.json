@@ -20,51 +20,51 @@
 		},
 		"schema": [
 			{
-				"name": "MFR-NAME",
+				"name": "AERO-ACE                      ",
 				"type": "String"
 			},
 			{
-				"name": "TYPE-AIRCRAFT",
+				"name": "CE 1                ",
 				"type": "String"
 			},
 			{
-				"name": "TYPE-ENGINE",
+				"name": "4",
 				"type": "String"
 			},
 			{
-				"name": "AC-CATEGORY",
+				"name": "1 ",
 				"type": "String"
 			},
 			{
-				"name": "AMAC-TC-BUILT",
+				"name": "14",
 				"type": "String"
 			},
 			{
-				"name": "NUMBER-ENGINES",
+				"name": "15",
 				"type": "String"
 			},
 			{
-				"name": "NUMBER-SEATS",
+				"name": "01",
 				"type": "String"
 			},
 			{
-				"name": "AC-WEIGHT",
+				"name": "001",
 				"type": "String"
 			},
 			{
-				"name": "SPEED",
+				"name": "CLASS 1",
 				"type": "String"
 			},
 			{
-				"name": "MFR-MDL-CODE",
+				"name": "0082",
 				"type": "String"
 			},
 			{
-				"name": "KIT-CODE",
+				"name": "00301BR",
 				"type": "String"
 			},
 			{
-				"name": "EMPTY",
+				"name": "Prop_11",
 				"type": "String"
 			}
 		]
