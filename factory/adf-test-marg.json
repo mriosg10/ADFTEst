@@ -1,0 +1,9 @@
+{
+	"name": "adf-test-marg",
+	"location": "southcentralus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ed9951fe-c81b-4cf5-a537-e8f75df222f0",
+		"tenantId": "76d81621-b9a9-4786-bb8f-a2efa839eee2"
+	}
+}
