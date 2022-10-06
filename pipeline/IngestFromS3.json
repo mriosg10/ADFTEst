@@ -19,7 +19,7 @@
 						"type": "DelimitedTextSource",
 						"storeSettings": {
 							"type": "AmazonS3ReadSettings",
-							"recursive": true,
+							"recursive": false,
 							"enablePartitionDiscovery": false
 						},
 						"formatSettings": {
@@ -38,6 +38,20 @@
 						}
 					},
 					"enableStaging": false,
+					"logSettings": {
+						"enableCopyActivityLog": true,
+						"copyActivityLogSettings": {
+							"logLevel": "Info",
+							"enableReliableLogging": false
+						},
+						"logLocationSettings": {
+							"linkedServiceName": {
+								"referenceName": "Staging",
+								"type": "LinkedServiceReference"
+							},
+							"path": "output"
+						}
+					},
 					"translator": {
 						"type": "TabularTranslator",
 						"mappings": [
@@ -169,18 +183,6 @@
 								},
 								"sink": {
 									"name": "00301BR",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Prop_11",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "Prop_11",
 									"type": "String",
 									"physicalType": "String"
 								}
