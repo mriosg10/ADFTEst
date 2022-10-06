@@ -1,0 +1,72 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AmazonS31",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "adftest-marg",
+				"fileName": "AcftRef.txt"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "AERO-ACE                      ",
+				"type": "String"
+			},
+			{
+				"name": "CE 1                ",
+				"type": "String"
+			},
+			{
+				"name": "4",
+				"type": "String"
+			},
+			{
+				"name": "1 ",
+				"type": "String"
+			},
+			{
+				"name": "14",
+				"type": "String"
+			},
+			{
+				"name": "15",
+				"type": "String"
+			},
+			{
+				"name": "01",
+				"type": "String"
+			},
+			{
+				"name": "001",
+				"type": "String"
+			},
+			{
+				"name": "CLASS 1",
+				"type": "String"
+			},
+			{
+				"name": "0082",
+				"type": "String"
+			},
+			{
+				"name": "00301BR",
+				"type": "String"
+			},
+			{
+				"name": "Prop_11",
+				"type": "String"
+			}
+		]
+	}
+}
