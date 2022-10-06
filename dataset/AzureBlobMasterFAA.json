@@ -1,17 +1,18 @@
 {
-	"name": "S3Data",
+	"name": "AzureBlobMasterFAA",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AmazonS31",
+			"referenceName": "Staging",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AmazonS3Location",
-				"bucketName": "adftest-marg",
-				"fileName": "AcftRef.txt"
+				"type": "AzureBlobStorageLocation",
+				"fileName": "FAAaircraft.txt",
+				"folderPath": "FAAaircraft",
+				"container": "input"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

@@ -26,11 +26,182 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobStorageWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "AERO-ACE                      ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AERO-ACE                      ",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CE 1                ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CE 1                ",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "4",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "4",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "1 ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "1 ",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "14",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "14",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "15",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "15",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "01",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "01",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "001",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "001",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CLASS 1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CLASS 1",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "0082",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "0082",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "00301BR",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "00301BR",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Prop_11",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Prop_11",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "S3Data",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureBlobMasterFAA",
 						"type": "DatasetReference"
 					}
 				]
