@@ -47,7 +47,7 @@
 								"type": "DelimitedTextSource",
 								"storeSettings": {
 									"type": "AmazonS3ReadSettings",
-									"recursive": true,
+									"recursive": false,
 									"enablePartitionDiscovery": false
 								},
 								"formatSettings": {
@@ -66,149 +66,427 @@
 								}
 							},
 							"enableStaging": false,
+							"logSettings": {
+								"enableCopyActivityLog": true,
+								"copyActivityLogSettings": {
+									"logLevel": "Info",
+									"enableReliableLogging": false
+								},
+								"logLocationSettings": {
+									"linkedServiceName": {
+										"referenceName": "Staging",
+										"type": "LinkedServiceReference"
+									},
+									"path": "output"
+								}
+							},
 							"translator": {
 								"type": "TabularTranslator",
 								"mappings": [
 									{
 										"source": {
-											"name": "AERO-ACE                      ",
+											"name": "N-Number",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "AERO-ACE                      ",
+											"name": "N-Number",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "CE 1                ",
+											"name": "Serial Number",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "CE 1                ",
+											"name": "Serial Number",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "4",
+											"name": "MFR MDL Code",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "4",
+											"name": "MFR MDL Code",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "1 ",
+											"name": "Eng MFR Code",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "1 ",
+											"name": "Eng MFR Code",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "14",
+											"name": "Year MFR",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "14",
+											"name": "Year MFR",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "15",
+											"name": "Type Registrant",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "15",
+											"name": "Type Registrant",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "01",
+											"name": "Name",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "01",
+											"name": "Name",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "001",
+											"name": "Street 1",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "001",
+											"name": "Street 1",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "CLASS 1",
+											"name": "Street2",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "CLASS 1",
+											"name": "Street2",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "0082",
+											"name": "City",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "0082",
+											"name": "City",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "00301BR",
+											"name": "State",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "00301BR",
+											"name": "State",
 											"type": "String",
 											"physicalType": "String"
 										}
 									},
 									{
 										"source": {
-											"name": "Prop_11",
+											"name": "ZIP",
 											"type": "String",
 											"physicalType": "String"
 										},
 										"sink": {
-											"name": "Prop_11",
+											"name": "ZIP",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Region",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Region",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "County ",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "County ",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Country",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Country",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Last Activity Date",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Last Activity Date",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Cert Issue Date",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Cert Issue Date",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Certification Requested ",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Certification Requested ",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Type Aircraft",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Type Aircraft",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Type Engine",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Type Engine",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Status Code",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Status Code",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Mode S Code",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Mode S Code",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Fractional  Ownership",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Fractional  Ownership",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Airworthiness Date",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Airworthiness Date",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Other Name 1",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Other Name 1",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Other Name 2",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Other Name 2",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Other Name 3",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Other Name 3",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Other Name 4",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Other Name 4",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Other Name 5",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Other Name 5",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Expiration Date",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Expiration Date",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Unique ID",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Unique ID",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Kit MFR Code",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Kit MFR Code",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Kit Model",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Kit Model",
+											"type": "String",
+											"physicalType": "String"
+										}
+									},
+									{
+										"source": {
+											"name": "Mose S Code Hex",
+											"type": "String",
+											"physicalType": "String"
+										},
+										"sink": {
+											"name": "Mose S Code Hex",
 											"type": "String",
 											"physicalType": "String"
 										}
@@ -245,7 +523,340 @@
 			},
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/S3Data')]",
-				"[concat(variables('factoryId'), '/datasets/AzureBlobMasterFAA')]"
+				"[concat(variables('factoryId'), '/datasets/AzureBlobMasterFAA')]",
+				"[concat(variables('factoryId'), '/linkedServices/Staging')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/AzureBlobMasterFAA')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Staging",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "MASTER.txt",
+						"folderPath": "FAAmaster",
+						"container": "input"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "N-Number",
+						"type": "String"
+					},
+					{
+						"name": "Serial Number",
+						"type": "String"
+					},
+					{
+						"name": "MFR MDL Code",
+						"type": "String"
+					},
+					{
+						"name": "Eng MFR Code",
+						"type": "String"
+					},
+					{
+						"name": "Year MFR",
+						"type": "String"
+					},
+					{
+						"name": "Type Registrant",
+						"type": "String"
+					},
+					{
+						"name": "Name",
+						"type": "String"
+					},
+					{
+						"name": "Street 1",
+						"type": "String"
+					},
+					{
+						"name": "Street2",
+						"type": "String"
+					},
+					{
+						"name": "City",
+						"type": "String"
+					},
+					{
+						"name": "State",
+						"type": "String"
+					},
+					{
+						"name": "ZIP",
+						"type": "String"
+					},
+					{
+						"name": "Region",
+						"type": "String"
+					},
+					{
+						"name": "County ",
+						"type": "String"
+					},
+					{
+						"name": "Country",
+						"type": "String"
+					},
+					{
+						"name": "Last Activity Date",
+						"type": "String"
+					},
+					{
+						"name": "Cert Issue Date",
+						"type": "String"
+					},
+					{
+						"name": "Certification Requested ",
+						"type": "String"
+					},
+					{
+						"name": "Type Aircraft",
+						"type": "String"
+					},
+					{
+						"name": "Type Engine",
+						"type": "String"
+					},
+					{
+						"name": "Status Code",
+						"type": "String"
+					},
+					{
+						"name": "Mode S Code",
+						"type": "String"
+					},
+					{
+						"name": "Fractional  Ownership",
+						"type": "String"
+					},
+					{
+						"name": "Airworthiness Date",
+						"type": "String"
+					},
+					{
+						"name": "Other Name 1",
+						"type": "String"
+					},
+					{
+						"name": "Other Name 2",
+						"type": "String"
+					},
+					{
+						"name": "Other Name 3",
+						"type": "String"
+					},
+					{
+						"name": "Other Name 4",
+						"type": "String"
+					},
+					{
+						"name": "Other Name 5",
+						"type": "String"
+					},
+					{
+						"name": "Expiration Date",
+						"type": "String"
+					},
+					{
+						"name": "Unique ID",
+						"type": "String"
+					},
+					{
+						"name": "Kit MFR Code",
+						"type": "String"
+					},
+					{
+						"name": "Kit Model",
+						"type": "String"
+					},
+					{
+						"name": "Mose S Code Hex",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/Staging')]"
+			]
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/S3Data')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "AmazonS31",
+					"type": "LinkedServiceReference"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AmazonS3Location",
+						"bucketName": "adftest-marg",
+						"fileName": "MASTER.txt"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"nullValue": "\\N",
+					"quoteChar": "“"
+				},
+				"schema": [
+					{
+						"name": "N-Number",
+						"type": "String"
+					},
+					{
+						"name": "Serial Number",
+						"type": "String"
+					},
+					{
+						"name": "MFR MDL Code",
+						"type": "String"
+					},
+					{
+						"name": "Eng MFR Code",
+						"type": "String"
+					},
+					{
+						"name": "Year MFR",
+						"type": "String"
+					},
+					{
+						"name": "Type Registrant",
+						"type": "String"
+					},
+					{
+						"name": "Name",
+						"type": "String"
+					},
+					{
+						"name": "Street 1",
+						"type": "String"
+					},
+					{
+						"name": "Street2",
+						"type": "String"
+					},
+					{
+						"name": "City",
+						"type": "String"
+					},
+					{
+						"name": "State",
+						"type": "String"
+					},
+					{
+						"name": "ZIP",
+						"type": "String"
+					},
+					{
+						"name": "Region",
+						"type": "String"
+					},
+					{
+						"name": "County ",
+						"type": "String"
+					},
+					{
+						"name": "Country",
+						"type": "String"
+					},
+					{
+						"name": "Last Activity Date",
+						"type": "String"
+					},
+					{
+						"name": "Cert Issue Date",
+						"type": "String"
+					},
+					{
+						"name": "Certification Requested ",
+						"type": "String"
+					},
+					{
+						"name": "Type Aircraft",
+						"type": "String"
+					},
+					{
+						"name": "Type Engine",
+						"type": "String"
+					},
+					{
+						"name": "Status Code",
+						"type": "String"
+					},
+					{
+						"name": "Mode S Code",
+						"type": "String"
+					},
+					{
+						"name": "Fractional  Ownership",
+						"type": "String"
+					},
+					{
+						"name": "Airworthiness Date",
+						"type": "String"
+					},
+					{
+						"name": "Other Name 1",
+						"type": "String"
+					},
+					{
+						"name": "Other Name 2",
+						"type": "String"
+					},
+					{
+						"name": "Other Name 3",
+						"type": "String"
+					},
+					{
+						"name": "Other Name 4",
+						"type": "String"
+					},
+					{
+						"name": "Other Name 5",
+						"type": "String"
+					},
+					{
+						"name": "Expiration Date",
+						"type": "String"
+					},
+					{
+						"name": "Unique ID",
+						"type": "String"
+					},
+					{
+						"name": "Kit MFR Code",
+						"type": "String"
+					},
+					{
+						"name": "Kit Model",
+						"type": "String"
+					},
+					{
+						"name": "Mose S Code Hex",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/linkedServices/AmazonS31')]"
 			]
 		},
 		{
@@ -279,161 +890,6 @@
 				}
 			},
 			"dependsOn": []
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/S3Data')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "AmazonS31",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AmazonS3Location",
-						"bucketName": "adftest-marg",
-						"fileName": "AcftRef.txt"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": [
-					{
-						"name": "MFR-NAME",
-						"type": "String"
-					},
-					{
-						"name": "TYPE-AIRCRAFT",
-						"type": "String"
-					},
-					{
-						"name": "TYPE-ENGINE",
-						"type": "String"
-					},
-					{
-						"name": "AC-CATEGORY",
-						"type": "String"
-					},
-					{
-						"name": "AMAC-TC-BUILT",
-						"type": "String"
-					},
-					{
-						"name": "NUMBER-ENGINES",
-						"type": "String"
-					},
-					{
-						"name": "NUMBER-SEATS",
-						"type": "String"
-					},
-					{
-						"name": "AC-WEIGHT",
-						"type": "String"
-					},
-					{
-						"name": "SPEED",
-						"type": "String"
-					},
-					{
-						"name": "MFR-MDL-CODE",
-						"type": "String"
-					},
-					{
-						"name": "KIT-CODE",
-						"type": "String"
-					},
-					{
-						"name": "EMPTY",
-						"type": "String"
-					}
-				]
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AmazonS31')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureBlobMasterFAA')]",
-			"type": "Microsoft.DataFactory/factories/datasets",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"linkedServiceName": {
-					"referenceName": "Staging",
-					"type": "LinkedServiceReference"
-				},
-				"annotations": [],
-				"type": "DelimitedText",
-				"typeProperties": {
-					"location": {
-						"type": "AzureBlobStorageLocation",
-						"fileName": "FAAaircraft.txt",
-						"folderPath": "FAAaircraft",
-						"container": "input"
-					},
-					"columnDelimiter": ",",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
-				},
-				"schema": [
-					{
-						"name": "MFR-NAME",
-						"type": "String"
-					},
-					{
-						"name": "TYPE-AIRCRAFT",
-						"type": "String"
-					},
-					{
-						"name": "TYPE-ENGINE",
-						"type": "String"
-					},
-					{
-						"name": "AC-CATEGORY",
-						"type": "String"
-					},
-					{
-						"name": "AMAC-TC-BUILT",
-						"type": "String"
-					},
-					{
-						"name": "NUMBER-ENGINES",
-						"type": "String"
-					},
-					{
-						"name": "NUMBER-SEATS",
-						"type": "String"
-					},
-					{
-						"name": "AC-WEIGHT",
-						"type": "String"
-					},
-					{
-						"name": "SPEED",
-						"type": "String"
-					},
-					{
-						"name": "MFR-MDL-CODE",
-						"type": "String"
-					},
-					{
-						"name": "KIT-CODE",
-						"type": "String"
-					},
-					{
-						"name": "EMPTY",
-						"type": "String"
-					}
-				]
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/Staging')]"
-			]
 		}
 	]
 }
