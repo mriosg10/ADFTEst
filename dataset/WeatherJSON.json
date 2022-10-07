@@ -12,6 +12,61 @@
 				"type": "HttpServerLocation"
 			}
 		},
-		"schema": {}
+		"schema": {
+			"type": "object",
+			"properties": {
+				"version": {
+					"type": "string"
+				},
+				"user": {
+					"type": "string"
+				},
+				"dateGenerated": {
+					"type": "string"
+				},
+				"status": {
+					"type": "string"
+				},
+				"data": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"parameter": {
+								"type": "string"
+							},
+							"coordinates": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"lat": {
+											"type": "number"
+										},
+										"lon": {
+											"type": "number"
+										},
+										"dates": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"date": {
+														"type": "string"
+													},
+													"value": {
+														"type": "number"
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
 	}
 }
