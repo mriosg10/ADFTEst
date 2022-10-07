@@ -57,132 +57,408 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "AERO-ACE                      ",
+									"name": "N-Number",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "AERO-ACE                      ",
+									"name": "N-Number",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "CE 1                ",
+									"name": "Serial Number",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "CE 1                ",
+									"name": "Serial Number",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "4",
+									"name": "MFR MDL Code",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "4",
+									"name": "MFR MDL Code",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "1 ",
+									"name": "Eng MFR Code",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "1 ",
+									"name": "Eng MFR Code",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "14",
+									"name": "Year MFR",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "14",
+									"name": "Year MFR",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "15",
+									"name": "Type Registrant",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "15",
+									"name": "Type Registrant",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "01",
+									"name": "Name",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "01",
+									"name": "Name",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "001",
+									"name": "Street 1",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "001",
+									"name": "Street 1",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "CLASS 1",
+									"name": "Street2",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "CLASS 1",
+									"name": "Street2",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "0082",
+									"name": "City",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "0082",
+									"name": "City",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "00301BR",
+									"name": "State",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "00301BR",
+									"name": "State",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ZIP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ZIP",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Region",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Region",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "County ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "County ",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Country",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Country",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Last Activity Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Last Activity Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Cert Issue Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Cert Issue Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Certification Requested ",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Certification Requested ",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Type Aircraft",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Type Aircraft",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Type Engine",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Type Engine",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Status Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Status Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Mode S Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Mode S Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fractional  Ownership",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Fractional  Ownership",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Airworthiness Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Airworthiness Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Other Name 1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Other Name 1",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Other Name 2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Other Name 2",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Other Name 3",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Other Name 3",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Other Name 4",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Other Name 4",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Other Name 5",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Other Name 5",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Expiration Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Expiration Date",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Unique ID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Unique ID",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Kit MFR Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Kit MFR Code",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Kit Model",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Kit Model",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Mose S Code Hex",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Mose S Code Hex",
 									"type": "String",
 									"physicalType": "String"
 								}
