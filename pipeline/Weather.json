@@ -127,6 +127,7 @@
 								}
 							}
 						],
+						"collectionReference": "",
 						"mapComplexValuesToString": true
 					}
 				},
