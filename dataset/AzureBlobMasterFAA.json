@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "WeatherData.json",
+				"fileName": "101022",
+				"folderPath": "Weather",
 				"container": "input"
 			},
 			"columnDelimiter": ",",
