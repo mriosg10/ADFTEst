@@ -9,7 +9,8 @@
 		"type": "Json",
 		"typeProperties": {
 			"location": {
-				"type": "HttpServerLocation"
+				"type": "HttpServerLocation",
+				"relativeUrl": "2022-10-19T00:00:00ZP2D:PT3H/relative_humidity_1000hPa:p/47.412164,9.340652/json"
 			}
 		},
 		"schema": {
